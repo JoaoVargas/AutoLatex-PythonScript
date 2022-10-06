@@ -1,0 +1,24 @@
+\documentclass[12pt , a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{minted}
+\usepackage{scrextend}
+\usepackage{lipsum}
+\setminted[python]{breaklines, framesep=2mm, fontsize=\footnotesize, numbersep=5pt}
+\input{commands}
+
+\begin{document}
+
+%%--CABEÇALHO--%%
+\begin{center}
+    {\huge Lista 1 - Exercícios \par}
+    {\LARGE Python \par}
+\end{center}
+

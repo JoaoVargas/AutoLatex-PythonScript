@@ -1,0 +1,75 @@
+\documentclass[12pt , a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{minted}
+\usepackage{scrextend}
+\usepackage{lipsum}
+\setminted[python]{breaklines, framesep=2mm, fontsize=\footnotesize, numbersep=5pt}
+\input{commands}
+
+\begin{document}
+
+%%--CABEÇALHO--%%
+\begin{center}
+    {\huge Lista 1 - Exercícios \par}
+    {\LARGE Python \par}
+\end{center}
+
+%%--Problema 1--%%
+\problem Soma dois inteiros\\Recebe dois números inteiros, e retorna a sua soma.\par Argumentos: a (int): 1o valor; b (int): 2o valor;\par Retorna: int: a soma dos dois valores.
+
+%%--Problema 2--%%
+\problem Metro para milimetros\\Recebe um valor em metros, e retorna o valor em milímetros, sabendo que 1 metro equivale a 1000 milimetros.\par Argumento: metros (float): um valor em metros;\par Retorna: float: o valor convertido para milimetros,
+
+%%--Problema 3--%%
+\problem Tempo para percorrer uma distancia\\Recebe uma distância e a velocidade de movimentação, e retorna as horas que seriam gastas para percorrer em linha reta.\par Argumentos: distancia (float): a distância, em kilômetros. velocidade (float): a velocidade, em kilômetros por hora.\par Retorna: float: o tempo, em horas.
+
+%%--Problema 4--%%
+\problem Aumento salarial\\Recebe um salário e sua porcentagem de aumento, e retorna o novo salário.\par Argumentos: salario (float): o salário original. porcentagem (float): o percentual de aumento, entre 0 e 100.\par Retorna: float: o novo salário, com duas casas decimais.
+
+%%--Problema 5--%%
+\problem Preco com desconto\\Recebe um preço e sua porcentagem de desconto, e retorna o novo preço.\par Argumentos: preco\_original (float): o preco original do produto. percentual\_desconto (float): o percentual de desconto, entre 0 e 100.\par Returns: float: o preço final, após o desconto, com duas casas decimais.
+
+%%--Problema 6--%%
+\problem Dias para segundos\\Recebe uma data em dias com horas, minutos e segundos, e retorna a data em segundos.\par Argumentos: dias (int): a quantidade de dias. horas (int): a quantidade de horas. minutos (int): a quantidade de minutos. segundos (int): a quantidade de segundos.\par Retorna: int: a quantidade de segundos equivalente aos valores de dias, horas, minutos e segundos.
+
+%%--Problema 7--%%
+\problem Celsius para fahrenheit\\Recebe uma temperatura em graus Celsius, e retorna a temperatura em graus Fahrenheit.\par Argumento: celsius (float): a temperatura em graus Celsius.\par Retorna: float: a temperatura em graus Farenheit.
+
+%%--Problema 8--%%
+\problem Fahrenheit para celsius\\Recebe uma temperatura em graus Fahrenheit, e retorna a temperatura em graus Celsius.\par Argumento: farenheit (float): a temperatura em graus Fahrenheit.\par Retorna: float: a temperatura em graus Celsius.
+
+%%--Problema 9--%%
+\problem Preco aluguel carro\\Recebe uma quantidade de dias que o carro foi alugado e a quantidade de quilômetros rodados, e retorna o valor a ser pago. 1 dia: 60 reais mais R\$ 0,15 por km rodado.\par Argumentos: dias (int): quantidade de dias que o carro foi alugado. km (float): quantos quilômetros o carro rodou.\par Retorna: float: o preço do aluguel do carro, com 2 casas decimais,conforme a fórmula dada no enunciado.
+
+%%--Problema 10--%%
+\problem Dias perdidos por fumar\\Recebe uma quantidade de cigarros fumados por dia e a quantidade de anos que fuma, e retorna o total de dias perdidos, sabendo que cada cigarro reduz a vida em 10 minutos.\par Argumentos: cigarros\_fumados\_por\_dia (int): a quantidade de cigarros fumados por dia. anos\_fumando (int): a quantidade de anos que a pessoa fumou.\par Retorna: int: a quantidade de dias que a pessoa perdeu por fumar.
+
+%%--Problema 11--%%
+\problem Dois elevado a um milhao\\Calcula dois elevado a um milhão, e retorna a quantidade de algarismos.\par Retorna: int: a quantidade de algarismos que o resultado contém.
+
+%%--Problema 12--%%
+\problem Media final aprovado reprovado\\Recebe as notas das 2 provas e 2 exercícios de programação e retorna se o aluno foi ou não aprovado. As provas têm peso 7 e os exercícios têm peso 3. Cada parcial tem peso igual. Uma forma de resolver é calcular a 1a parcial, com a média ponderada entre p1 e ep1, depois calcular a 2a parcial, com as notas de p2 e ep2 e depois calcular a média aritmética entre a 1a e a 2a parcial.\par Argumentos: p1 (float): a nota da primeira prova. p2 (float): a nota da segunda prova. ep1 (float): a nota do 1o exercício. ep2 (float): a nota do 2o exercício.\par Returns: bool: True ou False, dependendo da média ser maior ou igual a 7 ou não.
+
+%%--Problema 13--%%
+\problem Salario\\Recebe quanto ganha por hora e quantas horas trabalho ao mês, e retorna o salário líquido.\par Descontos: - INSS é 8\% do salário bruto - IR é 11\% do salário bruto - Sindicato é 5\% do salário bruto. -- total 24\%\par Argumentos: valor\_hora (float): o valor hora pago ao funcionário. horas\_mensais (float): a quantidade de horas trabalhadas no mes.\par Returns: float: o salário líquido, após todos os descontos.
+
+%%--Problema 14--%%
+\problem Tinta\\Recebe quantos metros quadrados precisa pintar, e retorna a quantidade de latas de tinta a comprar. A cobertura da tinta é de 3 metros por litro de tinta. Cada lata possui 18 litros de tinta.\par Argumento: metros\_pintar (float): a quantidade de metros quadrados a pintar.\par Retorna: int: a quantidade de latas de tinta, arredondado pra cima.
+
+%%--Problema 15--%%
+\problem Duzias\\Receba o número de ovos e devolva a quantidade de dúzias correspondente. Considere sempre dúzias cheias, arredondando pra cima se necessário.\par Argumento: ovos (int): a quantidade de ovos.\par Retorna: int: a quantidade de dúzias correspondente à quantidade de ovos,arredondado pra cima.
+
+%%--Problema 16--%%
+\problem Decompor numero\\Leia um número inteiro menor que 1000 e devolva a quantidade de centenas, dezenas e unidades do mesmo. Obs.: não utilize operações com strings.\par Argumento: numero (int): um número menor que 1000.\par Retorna: tupla de inteiros, com as centenas, dezenas e unidades do numero.
+
+
+
+\end{document}

@@ -11,6 +11,7 @@ def soma_dois_inteiros(a, b):
     Retorna:
         int: a soma dos dois valores.
     """
+    return a+b
 
 def metro_para_milimetros(metros):
     """ Recebe um valor em metros, e retorna o valor em milímetros,
