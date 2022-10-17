@@ -1,0 +1,131 @@
+\documentclass[12pt , a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{minted}
+\usepackage{scrextend}
+\usepackage{lipsum}
+\usepackage{changepage}
+\setminted[python]{breaklines, framesep=2mm, fontsize=\footnotesize, numbersep=5pt}
+\input{commands}
+
+\begin{document}
+
+%%--CABEÇALHO--%%
+\begin{center}
+    {\huge Lista 1 - Exercícios \par}
+    {\LARGE Python \par}
+\end{center}
+
+%%--Problema 1--%%
+\problem Maior3\\ 
+Recebe três valores, e retorna o maior dos três.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}a (float): primeiro valor;\\
+b (float): segundo valor;\\
+c (float): terceiro valor;
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}float: o maior entre os três valores.
+\end{adjustwidth}
+\end{adjustwidth}
+
+%%--Problema 2--%%
+\problem Menor3\\ 
+Recebe três valores, e retorna o menor dos três.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}a (float): primeiro valor;\\
+b (float): segundo valor;\\
+c (float): terceiro valor;
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}float: o menor entre os três valores.
+\end{adjustwidth}
+\end{adjustwidth}
+
+%%--Problema 3--%%
+\problem Ano bissexto\\ 
+Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}a (float): primeiro lado;\\
+b (float): segundo lado;\\
+c (float): terceiro lado;
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}string: um texto indicando o resultado,   conforme aparece nos testes no final desse arquivo.
+\end{adjustwidth}
+\end{adjustwidth}
+
+%%--Problema 4--%%
+\problem Maior dia do mes\\ 
+Determine se um ano é bissexto ou não.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}ano (int): um ano, no formato de 4 dígitos.
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}bool: True ou False (verdadeiro ou falso), caso a ano seja ou não bissexto.
+\end{adjustwidth}
+\end{adjustwidth}
+
+%%--Problema 5--%%
+\problem Data valida\\ 
+Retorna o último dia do mês para um determinado ano e mês.\\
+Os valores possíveis são: 28, 29, 30 ou 31.\\
+Devem ser considerados os anos bissextos.\\
+Uma função separada para determinar se um ano é bissextopoderia ser utilizada.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}mes (int): um mês no formato de dois dígitos;\\
+ano (int): um ano, no fomato de 4 dígitos;
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}int: um inteiro indicando o último dia válido para aquele mês e ano.
+\end{adjustwidth}
+\end{adjustwidth}
+
+%%--Problema 6--%%
+\problem Baskara\\ 
+Recebe uma string no formato dd/mm/aaaa e informaum valor lógico indicando se a data é válida ou não.\\
+Verifica se ano é bissexto e outros detalhes.\\
+Confira os testes no final do arquivo para mais detalhes.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}data (string): data no formato "dd/mm/aaaa".
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}bool: True ou False, indicando se a datá é válida ou não.
+\end{adjustwidth}
+\end{adjustwidth}
+
+%%--Problema 7--%%
+\problem Acrescimo nota bb\\ 
+Calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. A função recebe a, b e c e faz as consistências, informando ao usuário nas seguintes situações: - Se o usuário informar o valor de A igual a zero é uma equaçao do 1o grau.\\
+ - Se o delta calculado for negativo, a equação não possui raizes reais.\\
+ Devolva uma tupla vazia.\\
+ - Se o delta calculado for igual a zero a equação possui apenas uma raiz real. Devolva uma tupla com um único valor.\\
+ - Se o delta for positivo, a equação possui duas raiz reais.\\
+ Devolva uma tupla com dois elementos.
+\begin{adjustwidth}{1cm}{}
+Argumentos:
+\begin{adjustwidth}{1cm}{}a (float): valor a da equação;\\
+b (float): valor b da equação;\\
+c (float): valor c da equação;
+\end{adjustwidth}
+Argumentos:
+\begin{adjustwidth}{1cm}{}tupla de floats: uma tupla, contando os valores das raízes, sendouma raiz, duas raízes ou uma tupla vazia caso não existam raízes.
+\end{adjustwidth}
+\end{adjustwidth}
+
+
+
+\end{document}

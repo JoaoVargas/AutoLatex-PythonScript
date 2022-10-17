@@ -49,10 +49,20 @@ while num < len(placeCom):
 coments=[]
 for comB in comentsBrute:     
     coments.append(comB
-                   .replace("\"", "").replace("        ", " ")
-                   .replace("    ", " ").replace("  ", "")
-                   .replace("\n\n","\par").replace("\n","")
-                   .replace("_","\_").replace("$","\$").replace("%","\%"))   
+                   .replace("    \"\"\"", "")
+                   .replace("\n\n    Argumentos:\n", "\n\\begin{adjustwidth}{1cm}{}\nArgumentos:\n\\begin{adjustwidth}{1cm}{}\n")
+                   .replace("        ", "   ")
+                   .replace("\n\n    Retorna:\n", "\n\\end{adjustwidth}\nArgumentos:\n\\begin{adjustwidth}{1cm}{}\n")
+                   .replace(".\n   ", ".\\\\\n")
+                   .replace("\n   ", "")
+                   .replace(";", ";\\\\\n")
+                   .replace(";\\\\\n\n", ";\n")
+                   )
+                   
+                #    .replace("\"", "").replace("        ", " ")
+                #    .replace("    ", "").replace("  ", "")
+                #    .replace("\n\n","\n\\begin{adjustwidth}{1cm}{} \n").replace("\n ","\\\\\n")
+                #    .replace("_","\_").replace("$","\$").replace("%","\%"))   
 
 pythonList.close()
 
@@ -61,14 +71,15 @@ with open("pre.txt","r") as fpre:
     pre = fpre.read()
 with open("pos.txt","r") as fpos:
     pos = fpos.read()
-with open("full.txt","w") as ffull:
+with open("full.tex","w") as ffull:
     ffull.write(pre)
 
     #escreve no full formatado para latex
     i = 0
     while i < len(titles):
         ffull.write("%%--Problema " + str(i + 1) + "--%%\n")
-        ffull.write("\problem " + titles[i] + "\\\\" + coments[i] + "\n\n")
+        ffull.write("\problem " + titles[i] + "\\\\ \n")
+        ffull.write(coments[i] + "\\end{adjustwidth}\n\\end{adjustwidth}\n\n")
         i += 1
 
     ffull.write(pos)

@@ -11,6 +11,7 @@
 \usepackage{minted}
 \usepackage{scrextend}
 \usepackage{lipsum}
+\usepackage{changepage}
 \setminted[python]{breaklines, framesep=2mm, fontsize=\footnotesize, numbersep=5pt}
 \input{commands}
 
