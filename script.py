@@ -2,7 +2,7 @@ from sys import argv
 
 #Ler uma linha e se for uma func retorna o nome da func formatado
 def checkFunc(line):
-    if "def" in line and "test" not in line and "main" not in line:
+    if "def" in line and "test(" not in line and "main(" not in line:
         title = line.split()[1].split("(")[0].replace("_"," ").capitalize()
         return title
 
@@ -49,10 +49,11 @@ while num < len(placeCom):
 coments=[]
 for comB in comentsBrute:     
     coments.append(comB
+                   .replace("_","\_").replace("$","\$").replace("%","\%")
                    .replace("    \"\"\"", "")
                    .replace("\n\n    Argumentos:\n", "\n\\begin{adjustwidth}{1cm}{}\nArgumentos:\n\\begin{adjustwidth}{1cm}{}\n")
                    .replace("        ", "   ")
-                   .replace("\n\n    Retorna:\n", "\n\\end{adjustwidth}\nArgumentos:\n\\begin{adjustwidth}{1cm}{}\n")
+                   .replace("\n\n    Retorna:\n", "\n\\end{adjustwidth}\nRetorna:\n\\begin{adjustwidth}{1cm}{}\n")
                    .replace(".\n   ", ".\\\\\n")
                    .replace("\n   ", "")
                    .replace(";", ";\\\\\n")
@@ -62,7 +63,7 @@ for comB in comentsBrute:
                 #    .replace("\"", "").replace("        ", " ")
                 #    .replace("    ", "").replace("  ", "")
                 #    .replace("\n\n","\n\\begin{adjustwidth}{1cm}{} \n").replace("\n ","\\\\\n")
-                #    .replace("_","\_").replace("$","\$").replace("%","\%"))   
+                #    )   
 
 pythonList.close()
 
