@@ -2,7 +2,7 @@ from sys import argv
 
 #Ler uma linha e se for uma func retorna o nome da func formatado
 def checkFunc(line):
-    if "def" in line and "test(" not in line and "main(" not in line:
+    if "def " in line and "test(" not in line and "main(" not in line:
         title = line.split()[1].split("(")[0].replace("_"," ").capitalize()
         return title
 
@@ -78,6 +78,7 @@ with open("full.tex","w") as ffull:
     #escreve no full formatado para latex
     i = 0
     while i < len(titles):
+        print("Ex",i+1,"feito -",titles[i])
         ffull.write("%%--Problema " + str(i + 1) + "--%%\n")
         ffull.write("\problem " + titles[i] + "\\\\ \n")
         ffull.write(coments[i] + "\\end{adjustwidth}\n\\end{adjustwidth}\n\n")
